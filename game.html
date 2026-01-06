@@ -4,29 +4,33 @@
   <meta charset="UTF-8">
   <title>Huyền Vũ Tu Tiên - Tu Luyện</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- UI -->
   <div id="ui-layer">
-    <div class="level-text" id="level-name">Cảnh giới: Luyện Khí</div>
-    <div>Linh khí: <span id="spirit-count">0</span></div>
-    <div class="stat-bar">
-      <div id="progress"></div>
+    <div class="header">
+      <div id="level-display" class="level-text">Cảnh giới: Luyện Khí</div>
+      <div id="state-display">Trạng thái: Đang đứng</div>
     </div>
-    <div class="hint">WASD: Di chuyển | Click: Ngồi thiền | SPACE: Đột phá</div>
+
+    <div class="stats-box">
+      <div>Linh khí: <span id="spirit-count">0</span></div>
+      <div class="stat-bar">
+        <div id="progress"></div>
+      </div>
+      <div id="speed-tag">Linh tốc: +0/s</div>
+    </div>
+
+    <div class="controls-hint">
+      WASD: Di chuyển | Giữ Chuột: Thiền | SPACE: Đột phá
+    </div>
   </div>
 
-  <!-- Canvas -->
   <canvas id="game"></canvas>
 
   <script src="main.js"></script>
-
   <script>
     document.addEventListener("contextmenu", e => e.preventDefault());
-    document.addEventListener("dragstart", e => e.preventDefault());
     window.addEventListener("mousedown", () => window.focus());
   </script>
 </body>
